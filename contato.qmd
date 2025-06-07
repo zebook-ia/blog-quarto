@@ -1,0 +1,5 @@
+---
+title: "Contato"
+---
+
+Entre em contato com o professor Gabriel Ramos pelo e-mail [contato@example.com](mailto:contato@example.com) para d\u00favidas, sugest\u00f5es ou parcerias.
