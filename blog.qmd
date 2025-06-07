@@ -1,0 +1,7 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+---
+
+Confira abaixo as publica\u00e7\u00f5es mais recentes.
