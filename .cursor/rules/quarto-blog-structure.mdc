@@ -1,0 +1,19 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Estrutura do Projeto Quarto Blog
+
+Este projeto é um blog Quarto para o Prof. Gabriel Ramos. Os arquivos principais incluem:
+
+- [prof-gabriel-ramos-blog/_quarto.yml](mdc:prof-gabriel-ramos-blog/_quarto.yml): Arquivo de configuração principal do site, define o título, navegação, tema e outras configurações gerais.
+- [prof-gabriel-ramos-blog/index.qmd](mdc:prof-gabriel-ramos-blog/index.qmd): Página inicial do blog, configurada para listar os posts.
+- [prof-gabriel-ramos-blog/styles.css](mdc:prof-gabriel-ramos-blog/styles.css): Arquivo CSS para estilos personalizados que modificam a aparência do tema padrão.
+- [prof-gabriel-ramos-blog/posts/](mdc:prof-gabriel-ramos-blog/posts/): Diretório onde cada subpasta contém um post individual do blog (geralmente com um arquivo index.qmd dentro).
+- [prof-gabriel-ramos-blog/editais.qmd](mdc:prof-gabriel-ramos-blog/editais.qmd): Página dedicada à listagem de editais.
+- [prof-gabriel-ramos-blog/manual.qmd](mdc:prof-gabriel-ramos-blog/manual.qmd): Manual de uso e edição do site, criado para ajudar o usuário a aprender Quarto.
+- [prof-gabriel-ramos-blog/about.qmd](mdc:prof-gabriel-ramos-blog/about.qmd): Página padrão "Sobre".
+- [prof-gabriel-ramos-blog/_site/](mdc:prof-gabriel-ramos-blog/_site/): Diretório gerado pelo comando `quarto render`, contendo os arquivos HTML do site publicado. **Não edite arquivos diretamente aqui.**
+
+Para gerar o site após fazer alterações nos arquivos `.qmd` ou `.css`, execute `quarto render` no terminal na raiz do projeto `prof-gabriel-ramos-blog`.
