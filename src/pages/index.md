@@ -1,0 +1,5 @@
+---
+title: Home
+---
+
+Welcome to the official website of **Professor Gabriel Ramos**. Here you will find study techniques, tools, and the latest updates on our blog.
