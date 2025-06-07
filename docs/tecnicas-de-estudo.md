@@ -1,0 +1,6 @@
+---
+id: tecnicas-de-estudo
+title: "T\u00e9cnicas de Estudo"
+---
+
+Nesta p\u00e1gina voc\u00ea encontrar\u00e1 m\u00e9todos e dicas para melhorar seu rendimento acad\u00eamico. Explore as estrat\u00e9gias que o professor Gabriel recomenda para organizar e potencializar seus estudos.
