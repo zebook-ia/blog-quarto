@@ -1,0 +1,8 @@
+_site/
+.Rhistory
+.ipynb_checkpoints/
+.quarto/
+
+node_modules/
+build/
+.docusaurus/
