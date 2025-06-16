@@ -71,6 +71,40 @@ As instru\u00e7\u00f5es a seguir assumem que voc\u00ea possui acesso \u00e0 VPS 
 
 Ap\u00f3s esses passos o blog estar\u00e1 acess\u00edvel pelo endere\u00e7o configurado em sua VPS.
 
+## Deployment usando Portainer e Traefik
+
+Caso voc\u00ea gerencie seus containers com o Portainer e j\u00e1 possua o Traefik instalado como proxy reverso, \u00e9 poss\u00edvel servir o blog est\u00e1tico em um cont\u00eainer Nginx.
+
+1. Renderize o site localmente:
+   ```bash
+   quarto render
+   ```
+   Os arquivos ser\u00e3o gerados dentro da pasta `_site`.
+
+2. Crie um `Dockerfile` simples no diret\u00f3rio do projeto:
+   ```Dockerfile
+   FROM nginx:alpine
+   COPY _site /usr/share/nginx/html
+   ```
+   Esse cont\u00eainer servir\u00e1 os arquivos est\u00e1ticos do blog.
+
+3. Construa a imagem e envie para um registro acess\u00edvel pelo Portainer:
+   ```bash
+   docker build -t meu-usuario/blog-quarto:latest .
+   docker push meu-usuario/blog-quarto:latest
+   ```
+
+4. No Portainer, crie um novo container ou stack com essa imagem. Para que o Traefik realize o roteamento, adicione labels como no exemplo abaixo (ajuste o dom\u00ednio):
+   ```yaml
+   labels:
+     - "traefik.enable=true"
+     - "traefik.http.routers.blog.rule=Host(`blog.exemplo.com`)"
+     - "traefik.http.routers.blog.entrypoints=websecure"
+     - "traefik.http.routers.blog.tls.certresolver=letsencrypt"
+   ```
+
+5. Salve a configura\u00e7\u00e3o e inicie o container. O Traefik ir\u00e1 encaminhar as requisi\u00e7\u00f5es para o Nginx, disponibilizando o blog no dom\u00ednio configurado.
+
 ## Atualiza\u00e7\u00f5es Futuras
 
 Para publicar novas p\u00e1ginas ou posts:
